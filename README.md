@@ -1,4 +1,5 @@
 # Porgramacion-2
+By Sabrina
 Materia Programacion 2
 La asignatura Programación II está diseñada como un paso avanzado en el desarrollo de habilidades de programación, con un enfoque específico en aplicaciones prácticas para el aprendizaje automático (Machine Learning, ML). En el contexto de la Maestría en Ciencia de Datos, esta materia busca dotar a los estudiantes de las herramientas y conocimientos necesarios para implementar modelos ML eficientes, escalables y basados en las mejores prácticas de la industria.
 
