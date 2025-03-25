@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/SABRINA%20PEREZ/anaconda3/Porgramacion-2/Challenges/Challenge%201/mlruns/0/baecc6e0547347d0a6df3e92d2081583/artifacts
+end_time: 1742861915477
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: baecc6e0547347d0a6df3e92d2081583
+run_name: Random_forestTraining
+run_uuid: baecc6e0547347d0a6df3e92d2081583
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742861902466
+status: 3
+tags: []
+user_id: SABRINA PEREZ
