@@ -18,7 +18,7 @@ mlf.set_experiment("Breast Cancer Prediction Pipeline")
 
 def main():
     # --- Load Data ---
-    file_path = os.path.join(os.path.dirname(__file__), 'data', 'breast-cancer-wisconsin.data.csv')
+    file_path = r"C:\Users\SABRINA PEREZ\anaconda3\Porgramacion-2\Challenges\Challenge 1\data\breast-cancer-wisconsin.data.csv"
     df = load_breast_cancer_data(file_path)
     if df is None:
         return

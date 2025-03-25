@@ -92,30 +92,4 @@ if __name__ == '__main__':
     from sklearn.model_selection import train_test_split
     from sklearn.linear_model import LogisticRegression
 
-    # Example usage
-    file_path_example = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'breast-cancer-wisconsin.data.csv')
-    df = load_breast_cancer_data(file_path_example)
-
-    if df is not None:
-        X, y = preprocess_module(df)
-        if y is not None:
-            # Split data (you might want to load the already split test set from training)
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
-
-            # Train a simple model (for demonstration purposes)
-            model = LogisticRegression(random_state=42)
-            model.fit(X_train, y_train)
-
-            # Evaluate the trained model
-            evaluate_model_module(model, X_test, y_test, model_name="LogisticRegression_Example")
-
-            # Example of evaluating a different model (if you trained one)
-            # from sklearn.ensemble import RandomForestClassifier
-            # rf_model = RandomForestClassifier(random_state=42)
-            # rf_model.fit(X_train, y_train)
-            # evaluate_model_module(rf_model, X_test, y_test, model_name="RandomForest_Example")
-
-        else:
-            print("\nNo target variable available, cannot evaluate model.")
-    else:
-        print(f"Could not load data for evaluation example from: {file_path_example}")
+    

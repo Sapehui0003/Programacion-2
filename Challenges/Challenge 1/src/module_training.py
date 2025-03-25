@@ -96,23 +96,4 @@ if __name__ == '__main__':
     from module_preprocessing import preprocess_module
     import os
 
-    # Example usage
-    file_path_example = r"C:\Users\SABRINA PEREZ\anaconda3\Porgramacion-2\Challenges\Challenge 1\data\breast-cancer-wisconsin.data.csv"
-    df = load_breast_cancer_data(file_path_example)
-
-    if df is not None:
-        X, y = preprocess_module(df)
-        if y is not None:
-            # Example of training a RandomForest model
-            rf_model, X_test_rf, y_test_rf = train_model_module(X, y, model_name="random_forest")
-            print(f"\nRandom Forest Model and test data obtained (test set size: {len(y_test_rf)}).")
-
-            # Example of training a Logistic Regression model
-            lr_model, X_test_lr, y_test_lr = train_model_module(X, y, model_name="logistic_regression")
-            print(f"\nLogistic Regression Model and test data obtained (test set size: {len(y_test_lr)}).")
-
-            # You can add examples for other models here
-        else:
-            print("\nNo target variable available, cannot train model.")
-    else:
-        print(f"Could not load data for model training example from: {file_path_example}")
+    
