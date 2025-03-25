@@ -70,3 +70,15 @@ Ensure that the data directory and the breast-cancer-wisconsin.data.csv file are
 #### 4. Monitoring MLFlow
 mlflow ui
 Then, open your web browser and navigate to http://127.0.0.1:5000 to view the registered experiments, metrics, models, and visualizations.
+
+
+### ● Architecture Diagram
+graph LR
+    A[Data Source: breast-cancer-wisconsin.data.csv] --> B(Load Data: module_preprocessing.py);
+    B --> C(Preprocess Data: module_preprocessing.py);
+    C --> D(Split Data: module_preprocessing.py);
+    D -- Training Data (X_train, y_train) --> E(Train Model: module_training.py);
+    D -- Testing Data (X_test, y_test) --> F(Evaluate Model: module_evaluation.py);
+    E --> G{MLflow Tracking};
+    F --> G;
+    G -- Parameters, Metrics, Artifacts, Model --> H[MLflow UI (http://localhost:5000)];
