@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/123114630666170240/e0bcf8d37334445cb410c357e7c34445/artifacts
+deleted_time: 1742875159966
+end_time: 1742869434402
+entry_point_name: ''
+experiment_id: '123114630666170240'
+lifecycle_stage: deleted
+run_id: e0bcf8d37334445cb410c357e7c34445
+run_name: MLOps Pipeline
+run_uuid: e0bcf8d37334445cb410c357e7c34445
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742869433620
+status: 4
+tags: []
+user_id: SABRINA PEREZ

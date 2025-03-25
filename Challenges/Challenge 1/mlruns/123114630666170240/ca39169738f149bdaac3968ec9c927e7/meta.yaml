@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/123114630666170240/ca39169738f149bdaac3968ec9c927e7/artifacts
+end_time: 1742868808658
+entry_point_name: ''
+experiment_id: '123114630666170240'
+lifecycle_stage: active
+run_id: ca39169738f149bdaac3968ec9c927e7
+run_name: LogisticRegression Training
+run_uuid: ca39169738f149bdaac3968ec9c927e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742868808463
+status: 4
+tags: []
+user_id: SABRINA PEREZ

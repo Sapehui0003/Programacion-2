@@ -1,68 +1,27 @@
 # mlops_pipeline.py
-import os
-import mlflow as mlf
-import mlflow.sklearn
-from mlflow.models import infer_signature
 
-# Import your modules
-from module_load_data import load_breast_cancer_data
-from module_preprocessing import preprocess_module
-from module_training import train_model_module
-from module_evaluation import evaluate_model_module
+import argparse
+from module_preprocessing import load_data, preprocess_data, split_data
+from module_training import train_model
+from module_evaluation import evaluate_and_log_model
 
-# Set MLflow tracking URI
-mlf.set_tracking_uri("http://localhost:5000")
+def main(data_path):
+    df = load_data(data_path)
+    X, y = preprocess_data(df)
+    X_train, X_test, y_train, y_test = split_data(X, y)
 
-# Set the experiment name
-mlf.set_experiment("Breast Cancer Prediction Pipeline")
+    print(f"Tamaño del conjunto de entrenamiento: {X_train.shape[0]} muestras")
+    print(f"Tamaño del conjunto de prueba: {X_test.shape[0]} muestras")
 
-def main():
-    # --- Load Data ---
-    file_path = r"C:\Users\SABRINA PEREZ\anaconda3\Porgramacion-2\Challenges\Challenge 1\data\breast-cancer-wisconsin.data.csv"
-    df = load_breast_cancer_data(file_path)
-    if df is None:
-        return
+    # Entrenar modelo
+    model = train_model(X_train, y_train, n_estimators=100)
 
-    # --- Preprocess Data ---
-    X, y = preprocess_module(df)
-    if y is None:
-        print("Target variable not found. Exiting.")
-        return
-
-    # --- Model Training ---
-    model_name = "LogisticRegression"  # You can change this to train different models
-    with mlf.start_run(run_name=f"{model_name} Training"):
-        # Log parameters
-        mlf.log_param("model_name", model_name)
-        test_size = 0.2
-        random_state = 42
-        mlf.log_param("test_size", test_size)
-        mlf.log_param("random_state", random_state)
-
-        # Train the model
-        model, X_test, y_test = train_model_module(
-            X, y, model_name=model_name, test_size=test_size, random_state=random_state
-        )
-
-        # Infer model signature
-        signature = infer_signature(X_train=X, model_input=X)
-        mlf.sklearn.log_model(model, f"{model_name}_model", signature=signature)
-        print(f"MLflow: Logged model signature.")
-
-    # --- Model Evaluation ---
-    with mlf.start_run(run_name=f"{model_name} Evaluation"):
-        # Load the trained model (optional, if you want a separate evaluation run)
-        # logged_model = f"runs:/{mlf.active_run().info.run_id}/{model_name}_model"
-        # loaded_model = mlflow.sklearn.load_model(logged_model)
-
-        # Evaluate the model
-        evaluate_model_module(model, X_test, y_test, model_name=model_name)
-
-        # Get the run ID for tracking URL
-        run_id = mlf.active_run().info.run_id
-        tracking_url = mlf.get_tracking_uri()
-        print(f"\nMLflow Tracking URL: {tracking_url}")
-        print(f"MLflow Run ID for Evaluation: {run_id}")
+    # Evaluar y registrar en MLflow
+    evaluate_and_log_model(model, X_test, y_test)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Pipeline de MLOps para detección de cáncer")
+    parser.add_argument("--data_path", type=str, required=True, help="Ruta del archivo CSV con los datos")
+
+    args = parser.parse_args()
+    main(args.data_path)

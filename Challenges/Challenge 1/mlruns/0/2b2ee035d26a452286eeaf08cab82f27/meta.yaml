@@ -1,8 +1,9 @@
 artifact_uri: file:///C:/Users/SABRINA%20PEREZ/anaconda3/Porgramacion-2/Challenges/Challenge%201/mlruns/0/2b2ee035d26a452286eeaf08cab82f27/artifacts
+deleted_time: 1742867100701
 end_time: 1742862473504
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 2b2ee035d26a452286eeaf08cab82f27
 run_name: LogisticRegression_ExampleEvaluation
 run_uuid: 2b2ee035d26a452286eeaf08cab82f27

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/123114630666170240/b8dd4796e48943d2895c650788723e15/artifacts
+end_time: 1742868352792
+entry_point_name: ''
+experiment_id: '123114630666170240'
+lifecycle_stage: active
+run_id: b8dd4796e48943d2895c650788723e15
+run_name: Data Loading
+run_uuid: b8dd4796e48943d2895c650788723e15
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742868352710
+status: 3
+tags: []
+user_id: SABRINA PEREZ

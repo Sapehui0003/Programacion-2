@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/SABRINA%20PEREZ/anaconda3/Porgramacion-2/Challenges/Challenge%201/mlruns/0/6e51ff769ec9499f87968285b3f14914/artifacts
+end_time: 1742867682029
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6e51ff769ec9499f87968285b3f14914
+run_name: Logistic_regressionTraining
+run_uuid: 6e51ff769ec9499f87968285b3f14914
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742867661774
+status: 3
+tags: []
+user_id: SABRINA PEREZ

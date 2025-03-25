@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/123114630666170240/fbeab58de2354db58ff303bee4f068c4/artifacts
+end_time: 1742868808363
+entry_point_name: ''
+experiment_id: '123114630666170240'
+lifecycle_stage: active
+run_id: fbeab58de2354db58ff303bee4f068c4
+run_name: Data Preprocessing
+run_uuid: fbeab58de2354db58ff303bee4f068c4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742868807590
+status: 3
+tags: []
+user_id: SABRINA PEREZ

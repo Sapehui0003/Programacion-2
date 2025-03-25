@@ -1,68 +1,38 @@
 # src/preprocessing.py
+# preprocessing.py
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-import os
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 
-def preprocess_module(df):
-    """
-    Performs data exploration and preprocessing on the input DataFrame.
+def load_data(file_path):
+    """Carga el dataset desde un archivo CSV."""
+    df = pd.read_csv(file_path)
+    return df
 
-    Args:
-        df (pd.DataFrame): The input DataFrame.
-
-    Returns:
-        tuple: A tuple containing the scaled features (X_scaled) and the target variable (y) if present,
-               otherwise just the scaled features (X_scaled, None).
-    """
+def preprocess_data(df):
+    """Realiza limpieza y preprocesamiento del dataset."""
     print("--- Data Exploration ---")
     print("Data Info:")
     df.info()
     print("\nData Describe:")
     print(df.describe())
-    print("\nData Value Counts for Each Column:")
-    for col in df.columns:
-        print(f"\nColumn: {col}")
-        print(df[col].value_counts())
-    print("\nNull Value Counts:")
-    print(df.isnull().sum())
-    # Add checks for other characters if needed (e.g., non-numeric in numeric columns)
-    print("\n--- End of Data Exploration ---")
 
-    print("\n--- Data Preprocessing ---")
+    # Eliminar columnas innecesarias
     df = df.drop(columns=["id", "Unnamed: 32"], errors='ignore')
-    if 'diagnosis' in df.columns:
-        print("Encoding 'diagnosis' column.")
-        df["diagnosis"] = LabelEncoder().fit_transform(df["diagnosis"])
-        X = df.drop(columns=["diagnosis"])
-        y = df["diagnosis"]
-    else:
-        print("Warning: 'diagnosis' column not found for label encoding.")
-        X = df
-        y = None
 
-    print("Normalizing features.")
+    # Codificar la variable objetivo (M = 1, B = 0)
+    df["diagnosis"] = LabelEncoder().fit_transform(df["diagnosis"])
+
+    # Separar características y variable objetivo
+    X = df.drop(columns=["diagnosis"])
+    y = df["diagnosis"]
+
+    # Normalizar las características
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
-    print("--- End of Data Preprocessing ---")
 
     return X_scaled, y
 
-if __name__ == '__main__':
-    from module_load_data import load_breast_cancer_data
-    import os
-
-    # Explicitly define the path to your dataset
-    file_path_example = r"C:\Users\SABRINA PEREZ\anaconda3\Porgramacion-2\Challenges\Challenge 1\data\breast-cancer-wisconsin.data.csv"
-
-    df = load_breast_cancer_data(file_path_example)
-    if df is not None:
-        X_scaled, y = preprocess_module(df)
-        print("\nProcessed Data (first 5 rows of scaled features):")
-        print(X_scaled[:5])
-        if y is not None:
-            print("\nTarget variable (first 5 values):")
-            print(y[:5])
-        else:
-            print("\nNo target variable found after preprocessing.")
-    else:
-        print(f"Could not load data for preprocessing example from: {file_path_example}")
+def split_data(X, y, test_size=0.2, random_state=42):
+    """Divide los datos en conjuntos de entrenamiento y prueba."""
+    return train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)

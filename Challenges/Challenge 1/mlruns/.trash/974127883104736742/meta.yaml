@@ -1,7 +1,0 @@
-artifact_location: mlflow-artifacts:/974127883104736742
-creation_time: 1742861880140
-experiment_id: '974127883104736742'
-last_update_time: 1742865921333
-lifecycle_stage: deleted
-name: Breast Cancer Prediction Pipeline
-tags: {}

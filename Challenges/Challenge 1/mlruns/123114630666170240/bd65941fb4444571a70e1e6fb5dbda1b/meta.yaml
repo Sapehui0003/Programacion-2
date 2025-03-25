@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/123114630666170240/bd65941fb4444571a70e1e6fb5dbda1b/artifacts
+deleted_time: 1742875159974
+end_time: 1742869857499
+entry_point_name: ''
+experiment_id: '123114630666170240'
+lifecycle_stage: deleted
+run_id: bd65941fb4444571a70e1e6fb5dbda1b
+run_name: Breast_Cancer_Pipeline
+run_uuid: bd65941fb4444571a70e1e6fb5dbda1b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742869839031
+status: 4
+tags: []
+user_id: SABRINA PEREZ

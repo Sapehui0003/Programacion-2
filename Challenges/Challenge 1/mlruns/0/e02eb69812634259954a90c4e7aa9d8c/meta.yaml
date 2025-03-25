@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/SABRINA%20PEREZ/anaconda3/Porgramacion-2/Challenges/Challenge%201/mlruns/0/e02eb69812634259954a90c4e7aa9d8c/artifacts
+deleted_time: 1742867100687
+end_time: 1742866255368
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: e02eb69812634259954a90c4e7aa9d8c
+run_name: LogisticRegression_ExampleEvaluation
+run_uuid: e02eb69812634259954a90c4e7aa9d8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742866254206
+status: 3
+tags: []
+user_id: SABRINA PEREZ

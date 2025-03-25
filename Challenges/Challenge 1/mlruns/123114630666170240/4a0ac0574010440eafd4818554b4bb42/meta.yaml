@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/123114630666170240/4a0ac0574010440eafd4818554b4bb42/artifacts
+deleted_time: 1742875159967
+end_time: 1742871852752
+entry_point_name: ''
+experiment_id: '123114630666170240'
+lifecycle_stage: deleted
+run_id: 4a0ac0574010440eafd4818554b4bb42
+run_name: Full_Pipeline_Run
+run_uuid: 4a0ac0574010440eafd4818554b4bb42
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742871850223
+status: 4
+tags: []
+user_id: SABRINA PEREZ
