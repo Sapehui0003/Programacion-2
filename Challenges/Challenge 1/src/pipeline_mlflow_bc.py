@@ -9,7 +9,7 @@ import mlflow
 import mlflow.sklearn
 
 # Cargar el archivo
-file_path = "C:/Users/osval/OneDrive/Documents/3. Projectos Visual Studio/Programacion2/Challenges/data/breast-cancer-wisconsin.data.csv"
+file_path = "C:\Users\SABRINA PEREZ\anaconda3\Porgramacion-2\Challenges\Challenge 1\data\breast-cancer-wisconsin.data.csv"
 df = pd.read_csv(file_path)
 
 # Mostrar las primeras filas del archivo para analizar su estructura
