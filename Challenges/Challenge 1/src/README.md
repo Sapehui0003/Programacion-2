@@ -71,6 +71,13 @@ Ensure that the data directory and the breast-cancer-wisconsin.data.csv file are
 mlflow ui
 Then, open your web browser and navigate to http://127.0.0.1:5000 to view the registered experiments, metrics, models, and visualizations.
 
+#### 4. Uploading results to GitHub
+To automatically upload your results to GitHub, you can use the provided upload_results.py script. Ensure this script is in the root of your project directory.
+
+You only need to execute:
+python upload_results.py
+
+This script will automatically add all changes, commit them with the message 'Resultados del challenge', and push them to the origin main branch of your GitHub repository.
 
 ### ● Architecture Diagram
 graph LR
