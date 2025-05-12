@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e928cc14aab041c3a00d429136dad1ec/artifacts
+end_time: 1745979250365
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e928cc14aab041c3a00d429136dad1ec
+run_name: caring-bird-785
+run_uuid: e928cc14aab041c3a00d429136dad1ec
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745979235832
+status: 3
+tags: []
+user_id: SABRINA PEREZ

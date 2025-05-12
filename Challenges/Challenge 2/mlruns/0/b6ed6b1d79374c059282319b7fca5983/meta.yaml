@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b6ed6b1d79374c059282319b7fca5983/artifacts
+end_time: 1745978628173
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b6ed6b1d79374c059282319b7fca5983
+run_name: industrious-crow-174
+run_uuid: b6ed6b1d79374c059282319b7fca5983
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745978612718
+status: 3
+tags: []
+user_id: SABRINA PEREZ

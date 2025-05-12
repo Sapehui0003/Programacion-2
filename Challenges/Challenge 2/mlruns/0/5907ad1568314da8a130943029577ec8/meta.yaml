@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5907ad1568314da8a130943029577ec8/artifacts
+end_time: 1745978018090
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5907ad1568314da8a130943029577ec8
+run_name: burly-gull-487
+run_uuid: 5907ad1568314da8a130943029577ec8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745978004211
+status: 4
+tags: []
+user_id: SABRINA PEREZ

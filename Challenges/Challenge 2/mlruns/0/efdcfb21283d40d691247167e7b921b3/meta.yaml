@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/efdcfb21283d40d691247167e7b921b3/artifacts
+end_time: 1745977686825
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: efdcfb21283d40d691247167e7b921b3
+run_name: classy-koi-790
+run_uuid: efdcfb21283d40d691247167e7b921b3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745977395358
+status: 4
+tags: []
+user_id: SABRINA PEREZ

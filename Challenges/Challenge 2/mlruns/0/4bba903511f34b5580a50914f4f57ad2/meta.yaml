@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4bba903511f34b5580a50914f4f57ad2/artifacts
+end_time: 1745978102022
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4bba903511f34b5580a50914f4f57ad2
+run_name: painted-ox-331
+run_uuid: 4bba903511f34b5580a50914f4f57ad2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745978079306
+status: 3
+tags: []
+user_id: SABRINA PEREZ
