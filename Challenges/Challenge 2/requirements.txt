@@ -1,0 +1,8 @@
+beautifulsoup4
+requests
+pandas
+nltk
+scikit-learn
+vaderSentiment
+mlflow
+joblib
